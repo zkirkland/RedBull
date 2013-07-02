@@ -3,17 +3,18 @@ from time import sleep
 from random import randint
 
 
-alertLevel = randint(25, 100)
+alertLevel = 100 #randint(25, 100)
 
-money = 3
+money = 0
 
 
 def drinkRedBull(a):
-	a += 30
+	a += randint(15, 40)
 	return a
 
 def checkPocketChange(a, m):
 	if m >= 2:
+		sleep(1)
 		print("\n\nYou go to the gas station to buy a Red Bull.")
 		sleep(2)
 		print("\nYou got a Red Bull and you're FLYING!!\n")
@@ -22,19 +23,29 @@ def checkPocketChange(a, m):
 		m -= 2
 		return a, m
 	else:
+		sleep(2)
 		print("\n\nYou go to the gas station to buy a Red Bull.")
+		sleep(2)
 		print("\nYou're out of money!\n")
-		sleepMode = "SLEEP MODE..."
+		sleep(2)
+		sleepMode = "sleep mode..."
 		activ = "ACTIVATE!!!"
 		for l in sleepMode:
 			print(l,end="")
 			sys.__stdout__.flush()
 			sleep(0.1)
-		sleep(2) 
+		sleep(1) 
 		for l in activ:
 			print(l, end="")
 			sys.__stdout__.flush()
 			sleep(0.1)
+		for l in range(5):
+			sys.stdout.write("\rsleep mode...            ")
+			sys.stdout.flush()
+			sleep(.1)
+			sys.stdout.write("\rsleep mode... ACTIVATE!!!")
+			sys.stdout.flush()
+			sleep(0.5)
 		sleep(2) 
 		print("\n")
 		print("\n...while attempting to buy a Red Bull you fall asleep\n on the"
@@ -56,12 +67,13 @@ def checkPocketChange(a, m):
 		return a, m
 
 if alertLevel <= 50:
-	print ("You're feeling tired today...")
+	print ("\nYou're feeling tired today...\n")
+	sleep(1)
 
 
 while alertLevel >= 1:
-	sys.stdout.write("\r{}".format(""))
-	sys.stdout.write("\r{}".format(alertLevel))
+	sys.stdout.write("\r{}".format("                "))
+	sys.stdout.write("\rAlert Level: {}".format(alertLevel))
 	sys.stdout.flush()
 	sleep(1)
 	alertLevel -= 5
