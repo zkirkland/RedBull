@@ -1,8 +1,8 @@
 from time import sleep
 from random import randint
 
-alertLevel = 10
-money = 2
+alertLevel = 100
+money = 5
 
 
 def drinkRedBull(a):
