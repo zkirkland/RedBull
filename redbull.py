@@ -2,17 +2,17 @@ import sys
 from time import sleep
 from random import randint
 
-alertLevel = 100
+alertLevel = 10
 money = 3
 
 
 def drinkRedBull(a):
-    a += 30
+	a += 30
 	return a
 
 def checkPocketChange(a, m):
 	if m >= 2:
-		print("You got a Red Bull and you're FLYING!!")
+		print("\n\nYou got a Red Bull and you're FLYING!!\n")
 		a = drinkRedBull(a)
 		m -= 2
 		return a, m
@@ -41,7 +41,7 @@ def checkPocketChange(a, m):
 			sleep(1)
 		sleep(1)
 		print("\n")
-		print("\nYou wake up 8 hours later feeling refreshed\n")
+		print("\nYou wake up 8 hours later feeling refreshed!\n")
 		m = randint(1, 10)
 		print("You look around and realize people mistook you for a beggar and"
 		" have given you a total of ${}!\n".format(m))
@@ -52,7 +52,8 @@ def checkPocketChange(a, m):
 
 
 while alertLevel >= 1:
-	print(alertLevel)
+	print(alertLevel, end = " ")
+	sys.__stdout__.flush()
 	sleep(1)
 	alertLevel -= 5
 	if alertLevel < 10:
