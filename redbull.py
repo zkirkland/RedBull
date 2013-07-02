@@ -1,8 +1,8 @@
 from time import sleep
 from random import randint
 
-alertLevel = 100
-money = 5
+alertLevel = 10
+money = 2
 
 
 def drinkRedBull(a):
@@ -17,9 +17,12 @@ def checkPocketChange(a, m):
         return a, m
     else:
         print("You're out of money!")
-        print("While attempting to buy a Red Bull you fall asleep on the"
-        " pavement in front of the gas station.")
-        sleep(5)
+        print("SLEEP MODE... ACTIVATE!")
+        print("...while attempting to buy a Red Bull you fall asleep on the"
+        " pavement in front of the gas station...")
+        for i in range(5):
+            print("Zzz...")
+            sleep(1)
         print("You wake up 8 hours later feeling refreshed\n")
         m = randint(1, 10)
         print("You look around and realize people mistook you for a beggar and"
