@@ -2,7 +2,7 @@ import sys
 from time import sleep
 from random import randint
 
-alertLevel = 100
+alertLevel = 10
 money = 3
 
 
