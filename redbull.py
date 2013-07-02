@@ -45,6 +45,7 @@ def checkPocketChange(a, m):
 		m = randint(1, 10)
 		print("You look around and realize people mistook you for a beggar and"
 		" have given you a total of ${}!\n".format(m))
+		sleep(2)
 		a = 100
 		return a, m
 
