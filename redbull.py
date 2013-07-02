@@ -12,12 +12,16 @@ def drinkRedBull(a):
 
 def checkPocketChange(a, m):
 	if m >= 2:
-		print("\n\nYou got a Red Bull and you're FLYING!!\n")
+		print("\n\nYou go to the gas station to buy a Red Bull.")
+		sleep(2)
+		print("\nYou got a Red Bull and you're FLYING!!\n")
+		sleep(2)
 		a = drinkRedBull(a)
 		m -= 2
 		return a, m
 	else:
-		print("You're out of money!\n")
+		print("\n\nYou go to the gas station to buy a Red Bull.")
+		print("\nYou're out of money!\n")
 		sleepMode = "SLEEP MODE..."
 		activ = "ACTIVATE!!!"
 		for l in sleepMode:
@@ -31,7 +35,7 @@ def checkPocketChange(a, m):
 			sleep(0.1)
 		sleep(2) 
 		print("\n")
-		print("\n...while attempting to buy a Red Bull you fall asleep on the"
+		print("\n...while attempting to buy a Red Bull you fall asleep\n on the"
 		" pavement in front of the gas station...\n")
 		sleep(2)
 		zees = "Zzzz..."
@@ -52,8 +56,9 @@ def checkPocketChange(a, m):
 
 
 while alertLevel >= 1:
-	print(alertLevel, end = " ")
-	sys.__stdout__.flush()
+	sys.stdout.write("\r{}".format(""))
+	sys.stdout.write("\r{}".format(alertLevel))
+	sys.stdout.flush()
 	sleep(1)
 	alertLevel -= 5
 	if alertLevel < 10:
