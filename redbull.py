@@ -2,7 +2,11 @@ import sys
 from time import sleep
 from random import randint
 
+<<<<<<< HEAD
 alertLevel = 100
+=======
+alertLevel = randint(25, 100)
+>>>>>>> 43d46b5c1d716059c2736dd1fed07f156b5ccf9b
 money = 3
 
 
@@ -53,6 +57,8 @@ def checkPocketChange(a, m):
 		a = 100
 		return a, m
 
+if alertLevel <= 50:
+	print ("You're feeling tired today...")
 
 
 while alertLevel >= 1:
