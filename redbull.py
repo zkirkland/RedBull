@@ -2,11 +2,9 @@ import sys
 from time import sleep
 from random import randint
 
-<<<<<<< HEAD
-alertLevel = 100
-=======
+
 alertLevel = randint(25, 100)
->>>>>>> 43d46b5c1d716059c2736dd1fed07f156b5ccf9b
+
 money = 3
 
 
