@@ -17,7 +17,11 @@ def checkPocketChange(a, m):
 		sleep(1)
 		print("\n\nYou go to the gas station to buy a Red Bull.")
 		sleep(2)
-		print("\nYou got a Red Bull and you're FLYING!!\n")
+		print("\nYou chug a Red Bull.\n")
+		sleep(2)
+		print("Your pupils dilate as your heart rate speeds"
+		"\n up and your senses become heightened from the"
+		"\n massive amount of caffeine you have just ingested!\n")
 		sleep(2)
 		a = drinkRedBull(a)
 		m -= 2
@@ -77,7 +81,10 @@ while alertLevel >= 1:
 	sys.stdout.flush()
 	sleep(1)
 	alertLevel -= 5
-	if alertLevel < 10:
-		aL = checkPocketChange(alertLevel, money)
-		alertLevel = aL[0]
-		money = aL[1]
+	if alertLevel < 20:
+		print("\nYou are coming down off of your caffeine high"
+		"\n and your legs and arms feeel like lead...\n")
+		if alertLevel < 10:
+			aL = checkPocketChange(alertLevel, money)
+			alertLevel = aL[0]
+			money = aL[1]
