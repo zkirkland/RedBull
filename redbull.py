@@ -1,3 +1,4 @@
+
 import sys
 from time import sleep
 from random import randint
@@ -81,10 +82,7 @@ while alertLevel >= 1:
 	sys.stdout.flush()
 	sleep(1)
 	alertLevel -= 5
-	if alertLevel < 20:
-		print("\nYou are coming down off of your caffeine high"
-		"\n and your legs and arms feeel like lead...\n")
-		if alertLevel < 10:
-			aL = checkPocketChange(alertLevel, money)
-			alertLevel = aL[0]
-			money = aL[1]
+	if alertLevel < 10:
+		aL = checkPocketChange(alertLevel, money)
+		alertLevel = aL[0]
+		money = aL[1]
