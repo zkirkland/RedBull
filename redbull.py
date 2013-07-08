@@ -73,9 +73,9 @@ def checkPocketChange(a, m):
 			sleep(.2)
 		sleep(1)
 		print("\n")
-		print("\nYou wake up 8 hours later feeling refreshed!\n")
+		print("\n You wake up 8 hours later feeling refreshed!\n")
 		m = randint(1, 10)
-		print("You look around and realize people mistook you for a beggar and"
+		print(" You look around and realize people mistook you for a beggar and"
 		" have given you a total of ${}!\n".format(m))
 		sleep(2)
 		a = 100
