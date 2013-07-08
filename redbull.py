@@ -43,7 +43,7 @@ def checkPocketChange(a, m):
 		print("\n You groan loudly as your body and brain begin"
 		" to shut down...\n")
 		sleep(2)
-		sleepMode = "sleep mode..."
+		sleepMode = " sleep mode..."
 		activ = "ACTIVATE!!!"
 		for l in sleepMode:
 			print(l,end="")
@@ -66,7 +66,7 @@ def checkPocketChange(a, m):
 		print("\n ...while attempting to buy a Red Bull you fall asleep\n on the"
 		" pavement in front of the gas station...\n")
 		sleep(2)
-		zees = "Zzzz..."
+		zees = " Zzzz..."
 		for l in zees:
 			print(l, end = "")
 			sys.__stdout__.flush()
