@@ -41,7 +41,7 @@ def checkPocketChange(a, m):
 		print("\n You're out of money!\n")
 		sleep(2)
 		print("\n You groan loudly as your body and brain begin"
-		" to shut down...\n")
+		"  to shut down...\n")
 		sleep(2)
 		sleepMode = " sleep mode..."
 		activ = "ACTIVATE!!!"
